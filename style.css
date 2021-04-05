@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  margin: 0;
 }
 
 /*----------------HEADER-NAVBAR------------------*/
@@ -7,6 +8,14 @@ body {
 #header {
   display: flex;
   justify-content: space-between;
+  background-color: rgb(179, 175, 175);
+  z-index: 5;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #header-img {
@@ -20,7 +29,7 @@ body {
   justify-content: space-between;
 }
 
-#nav-link {
+.nav-link {
   margin: 20px 60px 20px 10px;
   padding: 10px;
   color: black;
@@ -32,9 +41,8 @@ body {
   transition: 0.5s;
 }
 
-#nav-link:hover {
+.nav-link:hover {
   color: red;
-  font-size: 18px;
 }
 
 /*-----------------------CONTENT--------------------------*/
@@ -56,17 +64,17 @@ body {
   display: inline-block;
 }
 
-#email-input {
+#email {
   margin: 10px 0;
   width: 99%;
   height: 35px;
   padding-left: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.536);
+  border: 1px solid rgb(240, 238, 238);
   border-radius: 5px;
   font-family: "Montserrat Alternates", sans-serif;
 }
 
-#btn-input {
+#submit {
   margin: 10px 0;
   width: 100%;
   height: 45px;
@@ -80,7 +88,7 @@ body {
   transition: 0.3s;
 }
 
-#btn-input:hover {
+#submit:hover {
   background-color: black;
   color: rgba(255, 225, 0, 0.92);
   border: 1px solid transparent;
@@ -91,10 +99,11 @@ body {
 /*----------------------FEATURES-CONTENT-----------------------------*/
 
 #content-features {
-  display: flex;
-  margin: 10px auto;
+  display: inline-flex;
+  margin: 30px 0;
   height: 80vh;
   align-items: center;
+  justify-content: space-between;
 }
 
 #content-box {
@@ -104,7 +113,7 @@ body {
   padding: 30px;
   margin: 10px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.26);
-  width: auto;
+  width: 300px;
 }
 
 .material-icons-outlined {
@@ -127,4 +136,214 @@ body {
   line-height: 25px;
   color: rgba(32, 31, 31, 0.664);
   font-size: 14px;
+}
+
+/*------------------VIDEO-MEDIA-------------------*/
+
+#video {
+  max-width: 100%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.26);
+}
+
+/*-------------------------PRICING-CONTENT---------------*/
+
+#content-pricing {
+  display: inline-flex;
+  margin: 30px 0;
+  height: 90vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#pricing-box {
+  border: 1px solid rgb(240, 238, 238);
+  border-radius: 5px;
+  padding: 0 4px 20px 0;
+  margin: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.26);
+  width: 350px;
+}
+
+#pricing-box-title {
+  width: 100%;
+  background-color: rgb(240, 238, 238);
+  padding: 1px;
+  border-radius: 0 5px 0 0;
+  border: 1px solid transparent;
+}
+
+#pricing-title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+  font-size: 15px;
+}
+
+#cost-title {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: black;
+  font-size: 25px;
+}
+
+#pricing-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: justify;
+  line-height: 25px;
+  color: rgba(32, 31, 31, 0.664);
+  font-size: 14px;
+  margin: 20px;
+}
+
+#btn-pricing {
+  margin: 5px 0;
+  width: 50%;
+  height: 45px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: rgba(255, 225, 0, 0.92);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#btn-pricing:hover {
+  background-color: black;
+  color: rgba(255, 225, 0, 0.92);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+/*-------------------FOOTER--------------------------*/
+#footer {
+  background-color: rgb(240, 238, 238);
+  padding: 20px 15px 5px 15px;
+  text-align: end;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  margin: 0 80px;
+}
+
+#links {
+  padding: 0 5px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
+
+#copyright {
+  color: rgb(154, 151, 151);
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 12px;
+}
+
+/*-----------------------RESPONSIVE-MOBILE------------------*/
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  #header {
+    display: grid;
+    justify-content: center;
+    top: 0;
+  }
+
+  #header-img {
+    max-width: 100%;
+    margin: 20px auto 5px auto;
+  }
+
+  #nav-bar {
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 0;
+    margin: 15px 10px;
+    letter-spacing: 1px;
+  }
+
+  /*----CONTENT----*/
+
+  #content {
+    max-width: 100%;
+  }
+
+  #content-title {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 30px 30px;
+  }
+
+  #form {
+    margin: 20px 0;
+    width: 85%;
+  }
+
+  #email {
+    width: 98%;
+  }
+
+  /*---FEATURES---*/
+
+  #content-features {
+    max-width: 100%;
+    display: grid;
+    margin-bottom: 70vh;
+    justify-content: center;
+  }
+
+  #content-box {
+    max-width: 100%;
+    margin: 10px 60px;
+    width: 425px;
+  }
+
+  /*---VIDEO---*/
+
+  #video {
+    margin: 10px 5px;
+  }
+
+  /*---PRICING---*/
+
+  #content-pricing {
+    display: grid;
+    max-width: 100%;
+    justify-content: center;
+    margin-bottom: 87vh;
+  }
+
+  #pricing-box {
+    padding: 0 60px 20px 60px;
+  }
+
+  #pricing-box-title {
+    display: transparent;
+    background-color: white;
+  }
+
+  /*---FOOTER---*/
+
+  #footer {
+    margin: 0;
+  }
 }
